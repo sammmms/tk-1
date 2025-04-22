@@ -22,9 +22,9 @@ This project demonstrates **5 core Computer Vision tasks** using both automated 
 ---
 
 ## 📁 Dataset  
-- **Source**: [Wiki-Art](https://www.wikiart.org/) / [Wiki-Art ART-GAN](https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md)  
-- **Sample Size**: 50 images (e.g., `cat`, `car` classes)  
-- **Preprocessing**: Normalization, 15x15 matrix sampling  
+- **Source**: [COCO Val 2017 and Annotations](https://cocodataset.org/#download)
+- **Sample Size**: 100 image
+- **Preprocessing** : Increase Contrast, Normalization, Sharpening
 
 ---
 

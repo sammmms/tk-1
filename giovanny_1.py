@@ -1,5 +1,10 @@
+# CHECKED BY SAM, 2025-22-4
+
+# Already moved to tk-1.py
+
 from PIL import Image, ImageEnhance
 import os
+import numpy as np
 
 # Dataset : Dataset merupakan dataset Wiki-Art yang telah di refine pada penelitian ART-GAN https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md
 # Deskripsi: Script ini mengubah ukuran gambar menjadi 15x15 piksel, mengubahnya menjadi grayscale, dan meningkatkan kontrasnya.
@@ -26,11 +31,15 @@ for filename in os.listdir(input_folder):
         img_contrast = enhancer.enhance(1.5)
 
         # TODO : Tambahkan normalisasi
+        # Normalisasi (skala piksel ke rentang 0-1)
+        img_array = np.array(img_contrast) / 255.0
+        img_normalized = Image.fromarray((img_array * 255).astype('uint8'))
 
         # TODO : Tambahkan sharpening
         
         # Path tujuan simpan
         save_path = os.path.join(output_folder, filename)
-        img_resized.save(save_path)
+        img.save(save_path)
+        
 
 print("Semua gambar berhasil di-resize ke folder:", output_folder)

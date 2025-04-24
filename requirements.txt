@@ -1,1 +1,8 @@
-numpy opencv-python-headless torchvision pillow matplotlib surf
+numpy
+opencv-contrib-python
+matplotlib
+scikit-image
+torchvision
+pillow
+matplotlib
+surf
